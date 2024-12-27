@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Academic Management System</title>
+  <style>
+    /* General Styling for the Body */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #9face6); /* Background Gradient */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    /* Login Container Styling */
+    .login-container {
+      background-color: #ffffff; /* Solid background color for the login form */
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    /* Form Title */
+    .login-container h1 {
+      color: #333;
+      margin-bottom: 25px;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Form Group Styling */
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    /* Label Styling */
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    /* Input Fields Styling */
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    /* Focus Effect for Input Fields */
+    .form-group input:focus, .form-group select:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    /* Submit Button Styling */
+    .form-group button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover Effect for Submit Button */
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Forgot Password Link Styling */
+    .forgot-password {
+      margin-top: 20px;
+    }
+
+    .forgot-password a {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 14px;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design for smaller screens */
+    @media (max-width: 400px) {
+      .login-container {
+        padding: 20px;
+        width: 90%;
+      }
+
+      .form-group input, .form-group select {
+        font-size: 14px;
+      }
+
+      .form-group button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="/dashboard" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <label for="role">Login As</label>
+        <select id="role" name="role" required>
+          <option value="admin">Admin</option>
+          <option value="faculty">Faculty</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+      <div class="forgot-password">
+        <a href="/forgot-password">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
